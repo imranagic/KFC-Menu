@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:StackLayout="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"            
+            x:Class="RMA_KFCMeni.DetMeni.Box"
+            xmlns:local="clr-namespace:RMA_KFCMeni.DetMeni"
+            BarBackgroundColor="DarkRed"
+            SelectedTabColor="White"
+            UnselectedTabColor="LightGray">
+
+
+
+    <ContentPage Title="Boxs">
+        <ScrollView>
+
+            <StackLayout:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="0,1"
+                  Padding="0" CornerRadius="0">
+                <StackLayout:PancakeView.BackgroundGradientStops>
+                    <StackLayout:GradientStopCollection>
+                        <StackLayout:GradientStop Color="DarkRed" Offset="0.1"/>
+                        <StackLayout:GradientStop Color="#F9C3C3" Offset="0.65"/>
+
+                    </StackLayout:GradientStopCollection>
+                </StackLayout:PancakeView.BackgroundGradientStops>
+
+                <StackLayout x:Name="StackList" BindableLayout.ItemsSource="{Binding Hrana}" Margin="15,15" Spacing="10">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                
+                                <Image Source="seperatorr.png" Aspect="AspectFill" HeightRequest="20" Margin="5,10,5,20"/>
+                                <Frame CornerRadius="10" BorderColor="White"  VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"
+                                   Margin="25,12" HasShadow="False" Padding="0">
+                                    <Image Source="{Binding Slika}" Aspect="AspectFill"/>
+                                </Frame>
+                                <Label Text="{Binding Ime}" TextColor="White" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="{Binding Cijena, StringFormat='Cijena: {0} KM'}" TextColor="DarkGray" FontSize="18" Opacity="0.90" HorizontalOptions="Center"/>
+                                
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </StackLayout:PancakeView>
+        </ScrollView>
+
+    </ContentPage>
+
+   
+
+</TabbedPage>
+

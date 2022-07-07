@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:StackLayout="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="RMA_KFCMeni.ONama">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="0,1"
+                  Padding="0" CornerRadius="0">
+                <StackLayout:PancakeView.BackgroundGradientStops>
+                    <StackLayout:GradientStopCollection>
+                        <StackLayout:GradientStop Color="DarkRed" Offset="0.3"/>
+                        <StackLayout:GradientStop Color="#F9C3C3" Offset="1"/>
+                    </StackLayout:GradientStopCollection>
+                </StackLayout:PancakeView.BackgroundGradientStops>
+
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Transparent" HeightRequest="27">
+                            <Label Text="KFC - Gives you wings" FontSize="22" TextColor="White" HorizontalOptions="CenterAndExpand" FontFamily="Lobster" 
+                                   Margin="40,0,0,0" FontAttributes="Bold"/>
+                        </Frame>
+                        <Image Source="logo2.png" HorizontalOptions="EndAndExpand" WidthRequest="80" HeightRequest="50" Margin="0,0,0,0" />
+                    </StackLayout>
+
+                    <Frame CornerRadius="10" Margin="20,0,20,5">
+                        <Image Source="onama2.png" Aspect="AspectFill" HeightRequest="150" />
+                    </Frame>
+
+
+                    <Label Text="O NAMA" FontSize="30" TextColor="Black" HorizontalOptions="CenterAndExpand"  Margin="0,-55,0,0" FontAttributes="Bold" CharacterSpacing="5"/>
+
+                    <Image Source="seperatorr.png" Aspect="AspectFill" HeightRequest="20" Margin="5,20,5,20"/>
+
+                    <Label Text="KFC - Kentucky Fried Chicken" FontSize="40" TextColor="White" CharacterSpacing="6" HorizontalTextAlignment="Center" Margin="10" FontAttributes="Bold"/>
+
+                    <Label Text="Kentucky Fried Chicken ili skraćeno KFC je američki lanac restorana brze hrane sa sjedištem u Louisvilleu,
+                           Kentuckyju koja se specijalizirala za prženu piletinu. To je drugi najveći svjetski lanac restorana 
+                           (po broju izdavanja jela) nakon McDonald'sa. KFC ima svoje restorane na 22 621 lokacija u 150 zemalja svijeta od prosinca 2019.
+                           Lanac je podružnica Yum! Branda, marka poznate restoranske tvrtke koja također posjeduje Pizza Hut, Taco Bell i WingStreet restorane."
+                           FontSize="Medium" Margin="50,10" HorizontalTextAlignment="Center" TextColor="AliceBlue"/>
+
+                    <Label Text="RADNO VRIJEME" HorizontalTextAlignment="Center" FontSize="24" Margin="0,20,0,15" TextColor="White" TextDecorations="Underline"/>
+
+
+                    <StackLayout Orientation="Horizontal" Margin="20,2" BackgroundColor="DarkRed">
+                        <Label Text="PONEDELJAK" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="18"></Label>
+                        <Label Text="08:00 - 00:00" HorizontalOptions="EndAndExpand" TextColor="AliceBlue" FontSize="18"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="20,2" BackgroundColor="DarkRed">
+                        <Label Text="UTORAK" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="18"></Label>
+                        <Label Text="08:00 - 00:00" HorizontalOptions="EndAndExpand" TextColor="AliceBlue" FontSize="18"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="20,2" BackgroundColor="DarkRed">
+                        <Label Text="SRIJEDA" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="18"></Label>
+                        <Label Text="08:00 - 00:00" HorizontalOptions="EndAndExpand" TextColor="AliceBlue" FontSize="18"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="20,2" BackgroundColor="DarkRed">
+                        <Label Text="ČETVRTAK" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="18"></Label>
+                        <Label Text="08:00 - 00:00" HorizontalOptions="EndAndExpand" TextColor="AliceBlue" FontSize="18"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="20,2" BackgroundColor="DarkRed">
+                        <Label Text="PETAK" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="18"></Label>
+                        <Label Text="08:00 - 00:00" HorizontalOptions="EndAndExpand" TextColor="AliceBlue" FontSize="18"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="20,2" BackgroundColor="DarkRed">
+                        <Label Text="SUBOTA" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="18"></Label>
+                        <Label Text="08:00 - 00:00" HorizontalOptions="EndAndExpand" TextColor="AliceBlue" FontSize="18"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="20,2" BackgroundColor="DarkRed">
+                        <Label Text="NEDJELJA" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="18"></Label>
+                        <Label Text="08:00 - 00:00" HorizontalOptions="EndAndExpand" TextColor="AliceBlue" FontSize="18"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout:PancakeView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

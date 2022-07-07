@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:StackLayout="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="RMA_KFCMeni.MainPage">
+
+    <ScrollView>
+        <StackLayout:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="0,1"
+                  Padding="0" CornerRadius="0">
+            <StackLayout:PancakeView.BackgroundGradientStops>
+                <StackLayout:GradientStopCollection>
+                    <StackLayout:GradientStop Color="DarkRed" Offset="0.4"/>
+                    <StackLayout:GradientStop Color="#F9C3C3" Offset="0.99"/>
+                </StackLayout:GradientStopCollection>
+            </StackLayout:PancakeView.BackgroundGradientStops>
+
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="Transparent">
+                        <Label Text="KFC - Gives you wings" FontSize="24" TextColor="White" HorizontalOptions="CenterAndExpand" 
+                               FontFamily="Lobster" Margin="40,10,0,0" FontAttributes="Bold"/>
+                    </Frame>
+
+                    <Image Source="logo2.png" HorizontalOptions="EndAndExpand" WidthRequest="80" HeightRequest="80" Margin="0,0,0,0" />
+                </StackLayout>
+
+
+                <Frame CornerRadius="10" Margin="10,0,10,10">
+                    <CarouselView x:Name="Carousel" HeightRequest="200" HorizontalOptions="CenterAndExpand" IndicatorView="Indicator" >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Source}" Aspect="AspectFill"/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </Frame>
+
+
+                <IndicatorView x:Name="Indicator" IndicatorColor="White" SelectedIndicatorColor="Gray" 
+                               IndicatorSize="8" VerticalOptions="Center" Margin="0,-60,0,0"/>
+
+                <Image Source="seperatorr.png" Aspect="AspectFill" HeightRequest="20" Margin="5,45,5,20"/>
+
+                <Label Text="Interesuje vas šta nudimo?" TextColor="White" HorizontalTextAlignment="Center" Margin="0,15,0,0" 
+                       FontSize="28" FontAttributes="Bold" />
+                <Label Text="Pogledajte našu ponudu" TextColor="White" HorizontalTextAlignment="Center" Margin="0,5,0,5"  
+                       FontSize="16" FontAttributes="Bold" TextDecorations="Underline"/>
+                <Button Text="Meni" CornerRadius="20" FontSize="19" TextColor="White" BackgroundColor="DarkRed" 
+                        HorizontalOptions="Center" Clicked="Meni_Button_Clicked" Padding="20,0,20,0" Margin="0,0,0,15"/>
+
+                <Image Source="seperatorr.png" Aspect="AspectFill" HeightRequest="20" Margin="5,20,5,20"/>
+
+                <Label Text="KFC ima svoje restorane na 22 621 lokacija u 150 zemalja svijeta" TextColor="White" 
+                       HorizontalTextAlignment="Center" Margin="10,15" FontSize="24" FontAttributes="Bold"/>
+                <Button Text="Saznaj više o nama" CornerRadius="20" FontSize="19" TextColor="White" 
+                        BackgroundColor="DarkRed" HorizontalOptions="Center" Clicked="Vise_Button_Clicked" Padding="20,0,20,0" Margin="0,0,0,15"/>
+            </StackLayout>
+        </StackLayout:PancakeView>
+    </ScrollView>
+</ContentPage>
